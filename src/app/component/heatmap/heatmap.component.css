@@ -1,0 +1,8 @@
+.container {
+  min-height: 100vh;
+  padding: 30px 50px;
+}
+
+#heatmap {
+  background-image: url('../../../assets/images/diagram.jpg');
+}

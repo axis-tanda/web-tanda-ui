@@ -1,0 +1,16 @@
+.inverted.menu {
+  background-color: #242C3C;
+}
+
+.inverted.menu>.item {
+  color: white;
+  font-family: 'Open Sans', cursive;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.inverted.menu>.active.item {
+  color: white;
+  font-family: 'Open Sans', cursive;
+  font-size: 17px;
+}

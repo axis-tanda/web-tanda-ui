@@ -57,6 +57,20 @@ export class AnalyticsComponent implements OnInit {
   public lineChartLegend = true;
   public lineChartType = 'line';
 
+    public barChartOptions:any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels:string[] = [    '7 AM', '8 AM', '9 AM', '10 AM', '11 AM', '12 NN',
+    '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM'];
+  public barChartType:string = 'bar';
+  public barChartLegend:boolean = true;
+
+  public barChartData:any[] = [
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Predict Number of Users'},
+  ];
+
+
 
   constructor(private service: AnalyticsService) {
     this.getPeopleCountByDay('Monday');

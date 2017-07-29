@@ -1,7 +1,7 @@
 <div class="ui container">
   <h2>Analytics</h2>
-  <div class="ui grid">
-    <div class="sixteen wide column">
+  <div class="ui stretched grid">
+    <div class="ten wide column">
       <div class="ui fluid raised card">
         <div class="ui content form">
           <h2 class="header">Hourly Room Usage</h2>
@@ -19,6 +19,40 @@
               <canvas *ngIf="!loading" baseChart height="100px" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
                 [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
             </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="six wide column">
+      <div class="ui fluid raised card">
+        <div class="ui content form">
+          <h2 class="header">Predict</h2>
+          <div class="ui inline fields">
+            <div class="field">
+              <select>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+              </select>
+            </div>
+            <div class="field">
+              <div class="ui button">Predict</div>
+            </div>
+          </div>
+          <div class="description">
+              <div style="display: block">
+                <canvas baseChart height="196px" 
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></canvas>
+              </div>
           </div>
 
         </div>
